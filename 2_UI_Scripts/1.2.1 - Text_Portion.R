@@ -89,7 +89,7 @@ tags$figure(
   p("\U2022 ", strong("Surname Soundex matches CHI Surname Soundex or CHI Previous Surname Soundex.")),
   p("\U2022 ", strong("First Forename Initial Match.")),
   p("\U2022 ", strong("Sex Match.")),
-  p("\U2022 ", strong("Date of Birth must match on at least one date element if present. Otherwise Date of Birth can be missing.")),
+  p("\U2022 ", strong("Date of Birth must match on at least one date element (year, month, day) if present. Otherwise Date of Birth can be a", strong("NULL") ,  "value.")),
 
   br(),
 
@@ -108,7 +108,7 @@ tags$figure(
   p("\U2022 ", strong("Previous Surname matches CHI Previous Surname Soundex or CHI Surname Soundex.")),
   p("\U2022 ", strong("First Forename Initial Match.")),
   p("\U2022 ", strong("Sex Match.")),
-p("\U2022 ", strong("Date of Birth must match on at least one date element if present. Otherwise Date of Birth can be missing.")),
+  p("\U2022 ", strong("Date of Birth must match on at least one date element (year, month, day) if present. Otherwise Date of Birth can be a", strong("NULL") ,  "value.")),
 
   br(),
 
@@ -135,7 +135,7 @@ p("\U2022 ", strong("Date of Birth must match on at least one date element if pr
 
   br(),
   
-  p("\U2022 ", strong("Date of Birth must match on at least one date element if present. Otherwise Date of Birth can be missing.")),
+ p("\U2022 ", strong("Date of Birth must match on at least one date element (year, month, day) if present. Otherwise Date of Birth can be a", strong("NULL") ,  "value.")),
 
 ####################################################
 # Block D Linkage Procedure
@@ -165,11 +165,8 @@ p("\U2022 ", strong("Date of Birth must match on at least one date element if pr
   p("\U2022 ", strong("First Forename Initial Match.")),
   p("\U2022 ", strong("Sex must not Match.")),
   p("\U2022 ", strong("Postcode Match.")),
-  p("\U2022 ", strong("Date of Birth Match.")),
+  p("\U2022 ", strong("Date of Birth Match."))
 
-  br(),
-
-  p("It is currently uncertain how/if block D works."),
 
 ####################################################
 # Data Visualisation - Possible Block Tab (Category Definition)
