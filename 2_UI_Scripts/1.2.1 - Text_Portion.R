@@ -165,7 +165,7 @@ tags$figure(
   p("\U2022 ", strong("First Forename Initial Match.")),
   p("\U2022 ", strong("Sex must not Match.")),
   p("\U2022 ", strong("Postcode Match.")),
-  p("\U2022 ", strong("Date of Birth Match."))
+  p("\U2022 ", strong("Date of Birth Match.")),
 
 
 ####################################################
