@@ -19,20 +19,7 @@ observe({
   if(!is.null(App_data$values)) {
     
 
-    # Get initial data column names to bind to tables
-    variable_names <-  data.frame(colnames(data())) %>%
-      rename(`Variable Names` = `colnames.data...`)
-    
-    ##############################
-    # Variable Completeness Check Table 
-    ##############################
-    
-    input_data_comp_check$values <- data.frame((colSums(!is.na(data())) / nrow(data()))*100) %>%
-      rename(`Variable Completion Rate (%)` = `X.colSums..is.na.data.....nrow.data.......100`) %>%
-      cbind(variable_names) %>%
-      mutate(`Number of missing Values per variable` = (nrow(data()) - (`Variable Completion Rate (%)`/100)*nrow(data()))) %>%
-      mutate(`Variable Completion Rate (%)` = round(`Variable Completion Rate (%)`, digits = 2)) %>%
-      select(`Variable Names`, `Number of missing Values per variable`,`Variable Completion Rate (%)`)
+    input_data_comp_check$values <- completeness_table(App_data$values)
     
     ##############################
     # Variable Uniqueness Check Table
