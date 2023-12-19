@@ -59,7 +59,28 @@ SelectBox_Update <- function(CHILI_data){
 }
 
 ####################################################
+# Function to create completeness table
 ####################################################
+
+# Function to create completeness table
+completeness_table <- function(df) {
+  
+  total_rows <- nrow(df) # number of records
+  variable_names <- names(df) # variable names
+  num_complete <- complete.cases(df) # Indicates completeness
+  completeness <- sapply(df, function(x) sum(!is.na(x))) # Number of non-NA values for each variable
+  percent_complete <- completeness / total_rows * 100 # percentage completeness
+  
+  # create completion table
+  out <- data.frame(Variable = variable_names, Completeness = completeness, Percent_Complete = percent_complete) %>%
+    mutate(Percent_Complete = round(Percent_Complete, digits = 2))
+  
+  # remove rownames as variable
+  rownames(out) <- NULL
+  
+  # return output
+  return(out)
+}
 
 ########################################################################
 ############ End of Sub-Script #########################################
