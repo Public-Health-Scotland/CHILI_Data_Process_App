@@ -30,14 +30,14 @@ output$input_var_completeness <- DT::renderDataTable({
 # Generate uniqueness table
 ####################################################
 
-output$input_var_uniqueness <- DT::renderDataTable({
-  
-  cb <- htmlwidgets::JS('function(){debugger;HTMLWidgets.staticRender();}')
-  
-  # Data visualisation is achieved via a function inside a external script.
-  input_var_uniqueness <- Table_Render(input_data_unique_check$values,cb)
-  
-})
+# output$input_var_uniqueness <- DT::renderDataTable({
+#   
+#   cb <- htmlwidgets::JS('function(){debugger;HTMLWidgets.staticRender();}')
+#   
+#   # Data visualisation is achieved via a function inside a external script.
+#   input_var_uniqueness <- Table_Render(input_data_unique_check$values,cb)
+#   
+# })
 
 ####################################################
 ####################################################
