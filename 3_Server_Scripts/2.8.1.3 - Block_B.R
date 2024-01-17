@@ -4,11 +4,17 @@
 ########################################################################
 
 ###################################################
-# Block B_C Check
+# Block B_C Check ----
 ###################################################
 
 if(!is.null(App_data$values$PREVIOUS_SURNAME) & !is.null(App_data$values$FIRST_FORENAME) & !is.null(App_data$values$SEX)) {
   
+  
+##############################
+# DOB Check ----
+##############################
+  
+  # If DOB present in record, potential match may be found in Block C.
   if(!is.null(App_data$values$DATE_OF_BIRTH)){
     
     block_data$values <- block_data$values |>
@@ -17,6 +23,11 @@ if(!is.null(App_data$values$PREVIOUS_SURNAME) & !is.null(App_data$values$FIRST_F
       mutate(Block_Type = ifelse(is.na(Block_Type) & !is.na(Block_Type_B_C),Block_Type_B_C,Block_Type)) |>
       select(-Block_Type_B_C)
     
+##############################
+# CHI Number Check ----
+##############################
+    
+    # If CHI present in record, potential match may be found in Block C.
   } else if(!is.null(App_data$values$CHI_NUMBER)) {
     
     block_data$values <- block_data$values |>
@@ -27,7 +38,7 @@ if(!is.null(App_data$values$PREVIOUS_SURNAME) & !is.null(App_data$values$FIRST_F
       select(-Block_Type_B_C,-CHI_Valid)
     
 ###################################################
-# Block B Check
+# Block B Check ----
 ###################################################
     
   } else {
@@ -40,7 +51,7 @@ if(!is.null(App_data$values$PREVIOUS_SURNAME) & !is.null(App_data$values$FIRST_F
   }
   
 ##############################
-# No record has a possible match in Block B
+# No record has a possible match in Block B ----
 ##############################
   
 } else {
