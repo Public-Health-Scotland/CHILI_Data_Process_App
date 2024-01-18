@@ -59,7 +59,52 @@ SelectBox_Update <- function(CHILI_data){
 }
 
 ####################################################
+# Variable Completeness Table Function ----
 ####################################################
+
+# Function to create completeness table
+completeness_table <- function(CHILI_data) {
+  
+  total_rows <- nrow(CHILI_data) # number of records
+  variable_names <- names(CHILI_data) # variable names
+  num_complete <- complete.cases(CHILI_data) # Indicates completeness
+  completeness <- sapply(CHILI_data, function(x) sum(!is.na(x))) # Number of non-NA values for each variable
+  missingness <- total_rows - completeness
+  percent_complete <- completeness / total_rows * 100 # percentage completeness
+  
+  # create completion table
+  out <- data.frame(Variable = variable_names, Missingness  = missingness, Completeness = completeness, Percent_Complete = percent_complete) %>%
+    mutate(Percent_Complete = round(Percent_Complete, digits = 2))
+  
+  # remove rownames as variable
+  rownames(out) <- NULL
+  
+  # return output
+  return(out)
+}
+
+####################################################
+# Variable Uniqueness Table Function ----
+####################################################
+
+# Function to create completeness table
+uniqueness_table <- function(CHILI_data) {
+  
+  total_rows <- nrow(CHILI_data) # number of records
+  variable_names <- names(CHILI_data) # variable names
+  uniqueness = sapply(CHILI_data, function(x) length(unique(x))) # Number of Unique Values
+  percent_unique <- uniqueness / total_rows * 100 # percentage completeness
+  
+  # create completion table
+  out <- data.frame(Variable = variable_names, Uniqueness = uniqueness, Percent_Uniqueness = percent_unique) %>%
+    mutate(Percent_Uniqueness = round(Percent_Uniqueness, digits = 2))
+  
+  # remove rownames as variable
+  rownames(out) <- NULL
+  
+  # return output
+  return(out)
+}
 
 ########################################################################
 ############ End of Sub-Script #########################################
