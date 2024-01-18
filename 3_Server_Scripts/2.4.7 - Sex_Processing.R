@@ -4,13 +4,13 @@
 ########################################################################
 
 ####################################################
-# Ensures each sex option only has one possible value for easier numeric conversion
+# Ensures each sex option only has one possible value ----
 ####################################################
 
 source("3_Server_Scripts/2.4.7.1 - Sex_Option_Processing.R",  local = TRUE)$value
 
 ####################################################
-# Converts Sex to numeric format
+# Converts Sex to numeric format ----
 ####################################################
 
 source("3_Server_Scripts/2.4.7.2 - Numeric_Conversion.R",  local = TRUE)$value

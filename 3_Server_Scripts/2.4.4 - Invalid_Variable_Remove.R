@@ -4,7 +4,7 @@
 ########################################################################
 
 ####################################################
-# This removes variables that can't be used in indexer.
+# This removes variables that can't be used in indexer ----
 ####################################################
     
     # All invalid names renamed to "rename"

@@ -4,16 +4,17 @@
 ########################################################################
 
 ####################################################
-# Shiny Alerts for name clean
+# Shiny Alerts for name clean ----
 ####################################################
 
 source("3_Server_Scripts/2.4.6.1 - Shiny_Alert_Setup.R",  local = TRUE)$value
 
 ####################################################
-# Name Cleaning:-
+# Name Cleaning  ----
+####################################################
+
 # Replace accented characters with non-accented equivalents
 # Removes non-alphanumeric characters
-####################################################
 
 source("3_Server_Scripts/2.4.6.2 - Name_Cleaning.R",  local = TRUE)$value
 

@@ -4,7 +4,7 @@
 ########################################################################
 
 ####################################################
-# Surname Cleaning
+# Surname Cleaning ----
 ####################################################
 
 if(is.null(App_data$values$SURNAME)) {
@@ -19,7 +19,7 @@ if(is.null(App_data$values$SURNAME)) {
 }
 
 ####################################################
-# Previous Surname Cleaning
+# Previous Surname Cleaning ----
 ####################################################
 
 if(is.null(App_data$values$PREVIOUS_SURNAME)) {
@@ -34,7 +34,7 @@ if(is.null(App_data$values$PREVIOUS_SURNAME)) {
 }
 
 ####################################################
-# 1st Forename Cleaning
+# 1st Forename Cleaning ----
 ####################################################
 
 if(is.null(App_data$values$FIRST_FORENAME)) {
@@ -49,7 +49,7 @@ if(is.null(App_data$values$FIRST_FORENAME)) {
 }
 
 ####################################################
-# 2nd Forename Cleaning
+# 2nd Forename Cleaning ----
 ####################################################
 
 if(is.null(App_data$values$SECOND_FORENAME)) {
