@@ -4,7 +4,7 @@
 ########################################################################
 
 ####################################################
-# Create Serial Variable Selectbox if checkbox is ticked
+# Create Serial Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$SerialId == TRUE){
@@ -12,7 +12,7 @@ if(input$SerialId == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
 
-  # Create Selectbox ----
+  # Create Selectbox
   output$Rename_Serial <- renderUI({
     selectInput("Serial_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -30,7 +30,7 @@ if(input$SerialId == TRUE){
 }
 
 ####################################################
-# Create CHI Number Data Variable Selectbox if checkbox is ticked
+# Create CHI Number Data Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$CHI_Number_Id == TRUE){
@@ -38,7 +38,7 @@ if(input$CHI_Number_Id == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
 
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_CHI_Number <- renderUI({
     selectInput("CHI_Number_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -57,7 +57,7 @@ if(input$CHI_Number_Id == TRUE){
 }
 
 ####################################################
-# Create Surname Variable Selectbox if checkbox is ticked
+# Create Surname Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$SurnameId == TRUE){
@@ -65,7 +65,7 @@ if(input$SurnameId == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Surname <- renderUI({
     selectInput("Surname_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -84,7 +84,7 @@ if(input$SurnameId == TRUE){
 }
 
 ####################################################
-# Create Previous Surname Variable Selectbox if checkbox is ticked
+# Create Previous Surname Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$Previous_SurnameId == TRUE){
@@ -92,7 +92,7 @@ if(input$Previous_SurnameId == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Previous_Surname <- renderUI({
     selectInput("Previous_Surname_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -111,7 +111,7 @@ if(input$Previous_SurnameId == TRUE){
 }
 
 ####################################################
-# Create First Forename Variable Selectbox if checkbox is ticked
+# Create First Forename Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$First_ForenameId == TRUE){
@@ -119,7 +119,7 @@ if(input$First_ForenameId == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_First_Forename <- renderUI({
     selectInput("First_Forename_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -138,7 +138,7 @@ if(input$First_ForenameId == TRUE){
 }
 
 ####################################################
-# Create Second Forename Variable Selectbox if checkbox is ticked
+# Create Second Forename Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$Second_ForenameId == TRUE){
@@ -146,7 +146,7 @@ if(input$Second_ForenameId == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Second_Forename <- renderUI({
     selectInput("Second_Forename_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -165,7 +165,7 @@ if(input$Second_ForenameId == TRUE){
 }
 
 ####################################################
-# Create Sex Variable Selectbox if checkbox is ticked
+# Create Sex Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$SexId == TRUE){
@@ -173,7 +173,7 @@ if(input$SexId == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Sex <- renderUI({
     selectInput("Sex_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -231,7 +231,7 @@ if(input$SexId == TRUE){
 }
 
 ####################################################
-# Create Date of Birth Variable Selectbox if checkbox is ticked
+# Create Date of Birth Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$Date_of_Birth_Id == TRUE){
@@ -239,7 +239,7 @@ if(input$Date_of_Birth_Id == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Date_of_Birth <- renderUI({
     selectInput("Date_of_Birth_Rename", "Choose Value to rename", choices = cb_options)
     
@@ -260,7 +260,7 @@ if(input$Date_of_Birth_Id == TRUE){
 }
 
 ####################################################
-# Create Date of Death Variable Selectbox if checkbox is ticked
+# Create Date of Death Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$Date_of_Death_Id == TRUE){
@@ -268,7 +268,7 @@ if(input$Date_of_Death_Id == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Date_of_Death <- renderUI({
     selectInput("Date_of_Death_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -286,7 +286,7 @@ if(input$Date_of_Death_Id == TRUE){
 }
 
 ####################################################
-# Create Postcode Variable Selectbox if checkbox is ticked
+# Create Postcode Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$Postcode_Id == TRUE){
@@ -294,7 +294,7 @@ if(input$Postcode_Id == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Postcode <- renderUI({
     selectInput("Postcode_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -313,7 +313,7 @@ if(input$Postcode_Id == TRUE){
 }
 
 ####################################################
-# Create NHS Number Variable Selectbox if checkbox is ticked
+# Create NHS Number Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$NHS_Number_Id == TRUE){
@@ -321,7 +321,7 @@ if(input$NHS_Number_Id == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_NHS_Number <- renderUI({
     selectInput("NHS_Number_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -340,7 +340,7 @@ if(input$NHS_Number_Id == TRUE){
 }
 
 ####################################################
-# Create Address Line 1 Variable Selectbox if checkbox is ticked
+# Create Address Line 1 Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$Address1_Id == TRUE){
@@ -348,7 +348,7 @@ if(input$Address1_Id == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Address1 <- renderUI({
     selectInput("Address_Rename1", "Choose Value to rename", choices = cb_options)
   })
@@ -367,14 +367,14 @@ if(input$Address1_Id == TRUE){
 }
 
 ####################################################
-# Create Address Line 2 Variable Selectbox if checkbox is ticked
+# Create Address Line 2 Variable Selectbox if checkbox is ticked ----
 ####################################################
 if(input$Address2_Id == TRUE){
   
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Address2 <- renderUI({
     selectInput("Address_Rename2", "Choose Value to rename", choices = cb_options)
   })
@@ -394,7 +394,7 @@ if(input$Address2_Id == TRUE){
 }
 
 ####################################################
-# Create Address Line 3 Variable Selectbox if checkbox is ticked
+# Create Address Line 3 Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$Address3_Id == TRUE){
@@ -402,7 +402,7 @@ if(input$Address3_Id == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Address3 <- renderUI({
     selectInput("Address_Rename3", "Choose Value to rename", choices = cb_options)
   })
@@ -421,7 +421,7 @@ if(input$Address3_Id == TRUE){
 }
 
 ####################################################
-# Create Address Variable Selectbox if checkbox is ticked
+# Create Address Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$Address_Id == TRUE){
@@ -429,7 +429,7 @@ if(input$Address_Id == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_Address <- renderUI({
     selectInput("Address_Rename", "Choose Value to rename", choices = cb_options)
   })
@@ -448,7 +448,7 @@ if(input$Address_Id == TRUE){
 }
 
 ####################################################
-# Create User Data Variable Selectbox if checkbox is ticked
+# Create User Data Variable Selectbox if checkbox is ticked ----
 ####################################################
 
 if(input$User_Data_Id == TRUE){
@@ -456,7 +456,7 @@ if(input$User_Data_Id == TRUE){
   # Stores all pre-processed data variable names
   cb_options <- SelectBox_Update(data())
   
-  # Update Selectbox ----
+  # Update Selectbox
   output$Rename_User_Data <- renderUI({
     selectInput("User_Data_Rename", "Choose Value to rename", choices = cb_options)
   })

@@ -4,10 +4,10 @@
 ########################################################################
 
 ####################################################
-# Process Female Option
+# Process Female Option ----
 ####################################################
 
-# Female Option to convert ----
+# Female Option to convert
 isolate(
   Female <- input$Female_Option
 )
@@ -25,10 +25,10 @@ if(length(Female) != 0) {
   }
 
 ####################################################
-# Process Male Option
+# Process Male Option ----
 ####################################################
 
-# Male Option to convert ----
+# Male Option to convert
 isolate(
   Male <- input$Male_Option
 )
@@ -45,10 +45,10 @@ if(length(Male) != 0) {
   }
 
 ####################################################
-# Process Other Option
+# Process Other Option ----
 ####################################################
 
-# Other Option to convert ---- 
+# Other Option to convert
 isolate(
   Other <- input$Other_Option
 )

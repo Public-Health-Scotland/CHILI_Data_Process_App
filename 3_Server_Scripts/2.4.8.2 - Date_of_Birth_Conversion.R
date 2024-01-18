@@ -5,7 +5,7 @@
 
 
 ####################################################
-# Check if Date of Birth is provided
+# Check if Date of Birth is provided ----
 ####################################################
 
 if(is.null(App_data$values$DATE_OF_BIRTH)){
